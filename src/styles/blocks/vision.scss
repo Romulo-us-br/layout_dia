@@ -6,6 +6,9 @@
 
   @include on-tabblet {
     padding-block: 200px 256px;
+    background-image: url(/src/images/shapes.png);
+    background-size: cover;
+    background-position: center;
   }
 
   text-align: center;
