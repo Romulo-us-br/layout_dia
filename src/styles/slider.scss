@@ -1,15 +1,23 @@
 .slider {
   position: relative;
-  z-index: 5;
+  z-index: 10; // Coloca o slider acima de tudo
 
   overflow: hidden; // ESSENCIAL: Esconde os outros 3 slides
+  grid-column: span 2;
 
   width: 100%; // Ou a largura fixa do seu Figma (ex: 400px)
+  margin-bottom: 0; // Garante que não haja espaço extra empurrando para fora
   border-radius: 20px;
+
+  @include on-tabblet {
+    grid-column: span 6;
+    height: 100%; // Faz o container ocupar toda a altura da célula do grid
+  }
 
   &__content {
     display: flex;
     width: 400%; // 4 slides = 400% da largura do pai
+    height: 100%; // Garante que o container flex acompanhe o estiramento
     transition: transform 0.5s ease-in-out;
   }
 
@@ -21,8 +29,12 @@
     &-img {
       display: block;
       width: 100%;
-      height: 390px; // Ou a altura exata que está no seu Figma
+      height: 390px; // O item ocupa toda a altura do content
       object-fit: cover;
+
+      @include on-small-desktop {
+        height: 100%; // Garante que o container flex acompanhe o estiramento
+      }
     }
   }
 }
@@ -30,16 +42,26 @@
 .slider__controls {
   position: absolute;
   bottom: 30%; // Altura em relação ao fundo (ajuste conforme o texto)
-  left: 30px; // Distância da borda esquerda
 
   display: flex;
   gap: 12px; // Espaço entre a seta esquerda e direita
+
+  padding-inline: 20px;
+
+  @include on-tabblet {
+    padding-inline: 40px;
+  }
 }
 
 .slider__info {
   position: absolute;
   bottom: 40px;
-  left: 30px;
+  padding-inline: 20px;
+
+  @include on-tabblet {
+    padding-inline: 40px;
+  }
+
   color: #fff;
 
   .slider__title {

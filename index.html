@@ -12,15 +12,30 @@
 
 <body class="page">
   <header class="header">
-
-    <section class="header__bloco">
-      <div class="header__top">
-        <div class="header__top-menu">
-          <img src="src/images/logo/air-logo.png" alt="logo do Air" class="header__top-menu-logo">
-          <a href="#" class="icon header__top-menu-icon"></a>
-        </div>
-        <a href="#" class="header__top-link">Hire Us</a>
+    <div class="header__top">
+      <div class="header__top-menu">
+        <img src="src/images/logo/air-logo.png" alt="logo do Air" class="header__top-menu-logo">
+        <a href="#" class="icon header__top-menu-icon"></a>
       </div>
+      <nav class="header__top-menu-hidden">
+        <ul class="header__top-menu-ul">
+          <li>
+            <a href="#" class="link-branco">About us</a>
+          </li>
+          <li>
+            <a href="#" class="link-branco">Services</a>
+          </li>
+          <li>
+            <a href="#" class="link-branco">Testimonials</a>
+          </li>
+          <li>
+            <a href="#" class="link-branco">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+      <a href="#" class="link-branco header__top-link">Hire Us</a>
+    </div>
+    <section class="header__bloco">
       <div class="header__content">
         <h1 class="header__content-title">Strategic Agency</h1>
         <p class="header__content-desc">We believe in the power of bold ideas that can solve business challenges.</p>
@@ -29,10 +44,10 @@
     </section>
 
     <section class="slider">
-      <input type="radio" name="slider" class="s1" checked>
-      <input type="radio" name="slider" class="s2">
-      <input type="radio" name="slider" class="s3">
-      <input type="radio" name="slider" class="s4">
+      <input type="radio" name="slider" id="s1" class="s1" checked>
+      <input type="radio" name="slider" id="s2" class="s2">
+      <input type="radio" name="slider" id="s3" class="s3">
+      <input type="radio" name="slider" id="s4" class="s4">
 
       <div class="slider__content">
 
@@ -107,6 +122,7 @@
         Our expertise
       </h1>
       <div class="expertise__content">
+
         <img src="src/images/expertise/expertise-1.png" alt="imagem ilustração do branding"
           class="expertise__content-img">
         <h3 class="expertise__content-title">Branding</h3>
@@ -129,18 +145,20 @@
       </div>
     </section>
     <section class="services">
-      <h4 class="services-name">
-        Services
-      </h4>
-      <h1 class="services-title">
-        Air is a full service creative agency
-      </h1>
-      <p class="services-desc">
-        Deep analytics, strong strategy and bright creative ideas.<br>
-        <br>
-        We are sure that first-rate job is possible only if all three components are united.
-      </p>
-      <div class="services__content">
+      <div class="services-intro">
+        <h4 class="services-intro-name">
+          Services
+        </h4>
+        <h1 class="services-intro-title">
+          Air is a full service creative agency
+        </h1>
+        <p class="services-intro-desc">
+          Deep analytics, strong strategy and bright creative ideas.<br>
+          <br>
+          We are sure that first-rate job is possible only if all three components are united.
+        </p>
+      </div>
+      <div class="services__content services__content-001">
         <a href="" class="link services__content-number">001</a>
         <p class="services__content-desc">
           Deep analytics, strong strategy and bright creative ideas.
@@ -151,7 +169,7 @@
           <a href="" class="link services__content__learn-link">Learn More</a>
         </div>
       </div>
-      <div class="services__content">
+      <div class="services__content services__content-002">
         <a href="" class="link services__content-number">002 </a>
         <p class="services__content-desc">
           Сontent Production
@@ -164,7 +182,7 @@
           <a href="" class="link services__content__learn-link">Learn More</a>
         </div>
       </div>
-      <div class="services__content">
+      <div class="services__content services__content-003">
         <a href="" class="link services__content-number">003 </a>
         <p class="services__content-desc">
           Marketing Strategy
@@ -177,7 +195,7 @@
           <a href="" class="link services__content__learn-link">Learn More</a>
         </div>
       </div>
-      <div class="services__content">
+      <div class="services__content services__content-004">
         <a href="" class="link services__content-number">004 </a>
         <p class="services__content-desc">
           Digital Communications
@@ -192,8 +210,10 @@
       </div>
     </section>
     <section class="testimonials">
-      <h4 class="testimonials-name">Testimonials</h4>
-      <h1 class="testimonials-title">What people say</h1>
+      <div class="testimonials-intro">
+        <h4 class="testimonials-intro-name">Testimonials</h4>
+        <h1 class="testimonials-intro-title">What people say</h1>
+      </div>
       <div class="testimonials__content">
         <div class="testimonials__content__ilustration">
           <img src="src/images/testimonials/testimonial-ava-1.jpg" alt=""
@@ -246,9 +266,12 @@
       </div>
     </section>
     <section class="visions">
-      <h1 class="visions-title">Vision, Passion, Results</h1>
-      <p class="visions-desc">We are sure that first-rate job is possible only if all three components are united.</p>
-      <button class="visions-button">Apply</button>
+      <div class="visions-content">
+        <h1 class="visions-content-title">Vision, Passion, Results</h1>
+        <p class="visions-content-desc">We are sure that first-rate job is possible only if all three components are
+          united.</p>
+        <button class="visions-content-button">Apply</button>
+      </div>
     </section>
     <section class="sendus">
       <div class="sendus__content">
@@ -284,30 +307,32 @@
           </div>
 
         </div>
-        <section class="footer">
-          <img src="src/images/logo/air-logo.png" alt="logo do air" class="footer-logo">
-          <nav class="footer-nav">
-            <ul class="footer-nav-ul">
-              <li>
-                <a href="#" class="footer-link">About Us</a>
-              </li>
-              <li>
-                <a href="#" class="footer-link">Home</a>
-              </li>
-              <li>
-                <a href="#" class="footer-link">Work</a>
-              </li>
-              <li>
-                <a href="#" class="footer-link">Services</a>
-              </li>
-              <li>
-                <a href="#" class="footer-link">Contact Us</a>
-              </li>
-            </ul>
-          </nav>
-        </section>
+
       </div>
     </section>
+
+    <footer class="footer">
+      <img src="src/images/logo/air-logo.png" alt="logo do air" class="footer-logo">
+      <nav class="footer-nav">
+        <ul class="footer-nav-ul">
+          <li>
+            <a href="#" class="footer-link">About Us</a>
+          </li>
+          <li>
+            <a href="#" class="footer-link">Home</a>
+          </li>
+          <li>
+            <a href="#" class="footer-link">Work</a>
+          </li>
+          <li>
+            <a href="#" class="footer-link">Services</a>
+          </li>
+          <li>
+            <a href="#" class="footer-link">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
 
   </main>
 </body>

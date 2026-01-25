@@ -2,14 +2,22 @@
 @import 'fonts';
 @import 'typography';
 @import 'slider';
+@import 'blocks/expertise';
+@import 'blocks/footer';
+@import 'blocks/header';
+@import 'blocks/whowheare';
+@import 'blocks/testimonials';
+@import 'blocks/vision';
+@import 'blocks/sendus';
+@import 'blocks/services';
 
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 .page {
-  box-sizing: border-box;
   font-size: 13px;
   line-height: 150%;
   background: $c-gray;
@@ -18,6 +26,10 @@
 .icon {
   display: inline-block;
 
+  @include on-small-desktop {
+    display: none;
+  }
+
   width: 18px;
   height: 18px;
 
@@ -25,536 +37,33 @@
   background-size: cover;
 }
 
-.header {
-  display: flex;
-  flex-direction: column;
-  color: #fff;
-  background-color: #2c2c2c;
-
-  &__bloco {
-    padding: 20px 20px 24px;
-  }
-
-  &__top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-bottom: 24px;
-
-    &-menu {
-      display: flex;
-      gap: 32px;
-      align-items: center;
-
-      &-icon {
-        text-decoration: none;
-      }
-    }
-
-    &-link {
-      position: relative;
-
-      display: inline-block;
-
-      font-weight: bold;
-      color: #fff;
-      text-decoration: none;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-
-      &::after {
-        content: ''; // Cria um elemento vazio "invisível"
-
-        position: absolute;
-        bottom: -5px; // Posiciona exatamente onde a borda deve ficar
-        left: 0;
-
-        width: 100%; // Faz a linha ter a mesma largura do texto
-        height: 2px; // Espessura da borda
-
-        opacity: 0;
-        background-color: #fff;
-
-        transition: opacity 0.3s ease;
-      }
-
-      &:hover::after {
-        opacity: 1; // Fica visível quando o mouse passa por cima do link
-      }
-    }
-  }
-
-  &__content {
-    padding-block: 16px;
-
-    &-title {
-      @include poppins-600;
-
-      margin: 0;
-      font-size: 52px;
-      line-height: 120%;
-      letter-spacing: -2px;
-    }
-
-    &-desc {
-      @include open-400;
-
-      padding-block: 32px 72px;
-      font-size: 18px;
-    }
-
-    &-button {
-      width: 100%;
-      height: 50px;
-      border-radius: 8px;
-
-      color: #fff;
-
-      background-color: #2060f6;
-    }
-  }
-
-  &__bg {
-    width: 100%;
-  }
-}
-
 .main {
   position: relative; // Garante que a div fique por cima
   z-index: 2;
-  margin-top: -20px; // Puxa a div branca para cima da imagem
+  margin-top: -20px;
+
+  @include on-small-desktop {
+    margin-top: 0;
+  }
+
+  // Puxa a div branca para cima da imagem
   background-color: #f3f5f6;
-}
-
-.whowhe {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-
-  padding: 120px 20px;
-
-  text-align: center;
-
-  &-title {
-    grid-column: span 2;
-
-    @include poppins-600;
-
-    font-size: 32px;
-    color: #253757;
-    letter-spacing: 0;
-  }
-
-  &-desc {
-    grid-column: span 2;
-
-    @include open-600;
-
-    font-size: 22px;
-    color: #6c788b;
-  }
-}
-
-.expertise {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 56px;
-
-  padding: 120px 20px 72px;
-  border-radius: 40px;
-
-  text-align: center;
-
-  background-color: #fff;
-
-  &-title {
-    grid-column: span 2;
-    font-size: 44px;
-    line-height: 120%;
-  }
-
-  &__content {
-    grid-column: span 2;
-
-    &-img {
-      display: inline-block;
-    }
-
-    &-title {
-      margin-block: 32px 16px;
-
-      @include poppins-600;
-
-      font-size: 20px;
-      line-height: 140%;
-      color: #253757;
-    }
-
-    &-desc {
-      @include open-400;
-
-      font-size: 14px;
-      color: #6c788b;
-    }
-  }
-}
-
-.services {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-  padding: 120px 20px;
-
-  &-name {
-    grid-column: span 2;
-
-    line-height: 100%;
-    color: #c0cdd7;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-
-    @include poppins-700;
-  }
-
-  &-title {
-    grid-column: span 2;
-
-    @include poppins-600;
-
-    font-size: 32px;
-    line-height: 130%;
-    color: #253757;
-  }
-
-  &-desc {
-    @include open-400;
-
-    grid-column: span 2;
-    font-size: 14px;
-    color: #6c788b;
-  }
-
-  &__content {
-    display: flex;
-    grid-column: span 2;
-    flex-direction: column;
-    gap: 32px;
-
-    padding: 32px;
-    border-radius: 16px;
-
-    background-color: #fff;
-
-    &-number {
-      @include poppins-600;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      width: 46px;
-      height: 24px;
-      border-radius: 23px;
-
-      color: #2060f6;
-
-      background-color: #f3f5f6;
-    }
-
-    &-desc {
-      @include open-400;
-
-      color: #6c788b;
-    }
-
-    &__learn {
-      display: flex;
-      gap: 16px;
-      align-items: center;
-
-      &-link {
-        @include poppins-600;
-
-        font-size: 15px;
-        line-height: 100%;
-        color: #334563;
-      }
-    }
-  }
 }
 
 .link {
   text-decoration: none;
 }
 
-.testimonials {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-  padding: 0 20px 120px;
-
-  &-name {
-    grid-column: span 2;
-
-    line-height: 100%;
-    color: #c0cdd7;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-
-    @include poppins-700;
-  }
-
-  &-title {
-    @include poppins-600;
-
-    grid-column: span 2;
-    font-size: 32px;
-    color: #253757;
-  }
-
-  &__content {
-    grid-column: span 2;
-    padding: 42px 32px;
-    border-radius: 40px;
-    background-color: #fff;
-
-    &__ilustration {
-      @include centralize;
-
-      position: relative;
-      z-index: 3;
-
-      width: 196px;
-      height: 196px;
-      margin-bottom: 24px;
-
-      &::before,
-      &::after {
-        content: '';
-
-        position: absolute;
-        z-index: -1;
-        top: 50%;
-        left: 50%;
-
-        width: 110px; // Arredondando 108.98px
-        height: 44px; // Arredondando 43.9px
-        border-radius: 12px; // Valor do Figma
-
-        background-color: #2060f6;
-      }
-
-      &::before {
-        // -50% centraliza, os outros valores deslocam para a esquerda/cima
-        // O 60deg vem direto do seu print do Figma
-        transform: translate(-85%, -115%) rotate(-60deg);
-      }
-
-      &::after {
-        // Desloca para a direita/baixo
-        transform: translate(-13%, 45%) rotate(-60deg);
-      }
-
-      &-img {
-        display: inline-block;
-
-        width: 110px;
-        height: 110px;
-        border-radius: 50%;
-
-        background-size: cover;
-      }
-    }
-
-    &__desc {
-      margin-bottom: 16px;
-      color: #6c788b;
-      text-align: center;
-
-      @include open-600;
-
-      &-img {
-        display: flex;
-        justify-self: center;
-        margin-bottom: 8px;
-      }
-    }
-
-    &__info {
-      text-align: center;
-
-      &-name {
-        @include open-600;
-
-        margin-bottom: 4px;
-        color: #253757;
-      }
-
-      &-proff {
-        @include poppins-700;
-
-        color: #c0cdd7;
-      }
-    }
-  }
+.link-branco {
+  @include link-white;
 }
 
-.visions {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-
-  padding: 72px 20px;
-
-  text-align: center;
-
-  background-color: #fff;
-
-  &-title {
-    @include poppins-600;
-
-    grid-column: span 2;
-
-    margin-bottom: 24px;
-
-    font-size: 44px;
-    line-height: 120%;
-    color: #253757;
-  }
-
-  &-desc {
-    @include open-600;
-
-    grid-column: span 2;
-    margin-bottom: 56px;
-    font-size: 22px;
-    color: #6c788b;
-  }
-
-  &-button {
-    @include open-600;
-    @include button-blue;
-
-    grid-column: span 2;
-  }
-}
-
-.sendus {
-  padding-top: 120px;
-
-  &__content {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 80px;
-
-    padding: 72px 20px 80px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-
-    color: #fff;
-
-    background-color: #2c2c2c;
-
-    &__msg {
-      display: grid;
-      grid-column: span 2;
-      gap: 40px;
-
-      &-title {
-        @include poppins-600;
-
-        font-size: 32px;
-        line-height: 130%;
-      }
-
-      &-input {
-        height: 41px;
-        border: none;
-        border-bottom: 1px solid #fff;
-        background-color: #2c2c2c;
-      }
-
-      &-button {
-        margin-top: 16px;
-
-        @include button-blue;
-      }
-    }
-
-    &__contactus {
-      display: grid;
-      grid-column: span 2;
-      gap: 40px;
-
-      &-icons {
-        display: flex;
-        flex-direction: row;
-        gap: 32px;
-        align-items: center;
-
-        margin-top: 16px;
-
-        &-f {
-          background-image: url(../images/logo/facebook.png);
-        }
-
-        &-x {
-          background-image: url(../images/logo/twitter.png);
-        }
-
-        &-i {
-          background-image: url(../images/logo/instagram.png);
-        }
-      }
-
-      &-title {
-        @include poppins-600;
-
-        font-size: 32px;
-      }
-
-      &-subtitle {
-        @include poppins-700;
-
-        margin-top: 8px;
-        color: gray;
-        text-transform: uppercase;
-        letter-spacing: 3px;
-      }
-
-      &-desc {
-        margin-top: 8px;
-
-        @include open-600;
-
-        font-size: 24px;
-        line-height: 150%;
-      }
-    }
-  }
+ul {
+  list-style: none;
 }
 
 .icon-social {
   display: inline-block;
   width: 32px;
   height: 32px;
-}
-
-.footer {
-  grid-column: span 1;
-
-  &-nav-ul {
-    display: grid;
-    gap: 24px;
-    margin-top: 48px;
-    list-style: none;
-  }
-
-  &-link {
-    @include poppins-700;
-
-    color: #fff;
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-  }
 }

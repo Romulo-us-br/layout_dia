@@ -1,0 +1,123 @@
+.sendus {
+  padding-top: 120px;
+
+  @include on-tabblet {
+    padding-top: 0;
+  }
+
+  &__content {
+    @include page-grid;
+    @include padding-page;
+
+    gap: 80px;
+
+    padding-block: 72px 82px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+
+    color: #fff;
+
+    background-color: #2c2c2c;
+
+    &__msg {
+      display: grid;
+      grid-column: span 2;
+      gap: 40px;
+
+      @include on-tabblet {
+        grid-column: span 4;
+      }
+
+      @include on-small-desktop {
+        grid-column: span 5;
+      }
+
+      &-title {
+        @include poppins-600;
+
+        font-size: 32px;
+        line-height: 130%;
+      }
+
+      &-input {
+        display: block;
+        grid-column: 1/-1;
+
+        box-sizing: border-box;
+        width: 100%;
+        height: 42px;
+        border: none;
+        border-bottom: 1px solid #fff;
+
+        background-color: transparent;
+      }
+
+      &-button {
+        width: 75%;
+        margin-top: 16px;
+
+        @include button-blue;
+      }
+    }
+
+    &__contactus {
+      display: grid;
+      grid-column: span 2;
+
+      @include on-tabblet {
+        grid-column: span 4;
+      }
+
+      @include on-small-desktop {
+        grid-column: 7 / span 5;
+      }
+
+      gap: 40px;
+
+      &-icons {
+        display: flex;
+        flex-direction: row;
+        gap: 32px;
+        align-items: center;
+
+        margin-top: 16px;
+
+        &-f {
+          background-image: url(../images/logo/facebook.png);
+        }
+
+        &-x {
+          background-image: url(../images/logo/twitter.png);
+        }
+
+        &-i {
+          background-image: url(../images/logo/instagram.png);
+        }
+      }
+
+      &-title {
+        @include poppins-600;
+
+        font-size: 32px;
+      }
+
+      &-subtitle {
+        @include poppins-700;
+
+        margin-top: 8px;
+        color: gray;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+      }
+
+      &-desc {
+        margin-top: 8px;
+
+        @include open-600;
+
+        font-size: 24px;
+        line-height: 150%;
+      }
+    }
+  }
+}
