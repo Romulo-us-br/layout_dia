@@ -1,0 +1,108 @@
+.slider {
+  position: relative;
+  z-index: 5;
+
+  overflow: hidden; // ESSENCIAL: Esconde os outros 3 slides
+
+  width: 100%; // Ou a largura fixa do seu Figma (ex: 400px)
+  border-radius: 20px;
+
+  &__content {
+    display: flex;
+    width: 400%; // 4 slides = 400% da largura do pai
+    transition: transform 0.5s ease-in-out;
+  }
+
+  &__item {
+    position: relative;
+    flex-shrink: 0; // Impede que o flexbox "esmague" o slide
+    width: 25%; // 25% de 400% = 100% da tela visível
+
+    &-img {
+      display: block;
+      width: 100%;
+      height: 390px; // Ou a altura exata que está no seu Figma
+      object-fit: cover;
+    }
+  }
+}
+
+.slider__controls {
+  position: absolute;
+  bottom: 30%; // Altura em relação ao fundo (ajuste conforme o texto)
+  left: 30px; // Distância da borda esquerda
+
+  display: flex;
+  gap: 12px; // Espaço entre a seta esquerda e direita
+}
+
+.slider__info {
+  position: absolute;
+  bottom: 40px;
+  left: 30px;
+  color: #fff;
+
+  .slider__title {
+    margin-bottom: 8px;
+
+    @include poppins-700;
+
+    line-height: 100%;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
+}
+
+.arrow {
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+
+  background-color: #fff;
+
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  // Use um background-image ou pseudo-elemento para a setinha interna
+  &.prev {
+    background-image: url('../images/arrow-left.png');
+    background-position: center;
+  }
+
+  &.next {
+    background-image: url('../images/arrow-right.png');
+    background-position: center;
+  }
+}
+
+.s1,
+.s2,
+.s3,
+.s4 {
+  display: none;
+}
+
+.s1:checked ~ .slider__content {
+  transform: translateX(0);
+}
+
+.s2:checked ~ .slider__content {
+  transform: translateX(-25%);
+}
+
+.s3:checked ~ .slider__content {
+  transform: translateX(-50%);
+}
+
+.s4:checked ~ .slider__content {
+  transform: translateX(-75%);
+}

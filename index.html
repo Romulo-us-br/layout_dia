@@ -1,19 +1,315 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
-    <title>Dia</title>
-    <link
-      rel="stylesheet"
-      href="src/styles/main.scss"
-    />
-  </head>
-  <body>
-    <h1>Dia</h1>
-    <script src="src/scripts/main.js"></script>
-  </body>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dia</title>
+  <link rel="stylesheet" href="src/styles/main.scss" />
+  <script src="src/scripts/main.js"></script>
+
+</head>
+
+<body class="page">
+  <header class="header">
+
+    <section class="header__bloco">
+      <div class="header__top">
+        <div class="header__top-menu">
+          <img src="src/images/logo/air-logo.png" alt="logo do Air" class="header__top-menu-logo">
+          <a href="#" class="icon header__top-menu-icon"></a>
+        </div>
+        <a href="#" class="header__top-link">Hire Us</a>
+      </div>
+      <div class="header__content">
+        <h1 class="header__content-title">Strategic Agency</h1>
+        <p class="header__content-desc">We believe in the power of bold ideas that can solve business challenges.</p>
+        <button class="button-blue header__content-button">Learn more</button>
+      </div>
+    </section>
+
+    <section class="slider">
+      <input type="radio" name="slider" class="s1" checked>
+      <input type="radio" name="slider" class="s2">
+      <input type="radio" name="slider" class="s3">
+      <input type="radio" name="slider" class="s4">
+
+      <div class="slider__content">
+
+        <div class="slider__item">
+          <img src="src/images/slider/img-slider-1.png" class="slider__item-img">
+
+          <div class="slider__controls">
+            <label for="s4" class="arrow prev"></label>
+            <label for="s2" class="arrow next"></label>
+          </div>
+
+          <div class="slider__info">
+            <h3 class="slider__title">Intro</h3>
+            <p class="slider__desc">By the same illusion which lifts the horizon.</p>
+          </div>
+        </div>
+
+        <div class="slider__item">
+          <img src="src/images/slider/img-slider-2.png" class="slider__item-img">
+
+          <div class="slider__controls">
+            <label for="s1" class="arrow prev"></label>
+            <label for="s3" class="arrow next"></label>
+          </div>
+
+          <div class="slider__info">
+            <h3 class="slider__title">Intro</h3>
+            <p class="slider__desc">By the same illusion which lifts the horizon.</p>
+          </div>
+        </div>
+
+        <div class="slider__item">
+          <img src="src/images/slider/img-slider-3.png" class="slider__item-img">
+
+          <div class="slider__controls">
+            <label for="s2" class="arrow prev"></label>
+            <label for="s4" class="arrow next"></label>
+          </div>
+
+          <div class="slider__info">
+            <h3 class="slider__title">Intro</h3>
+            <p class="slider__desc">By the same illusion which lifts the horizon.</p>
+          </div>
+        </div>
+
+        <div class="slider__item">
+          <img src="src/images/slider/img-slider-4.png" class="slider__item-img">
+
+          <div class="slider__controls">
+            <label for="s3" class="arrow prev"></label>
+            <label for="s1" class="arrow next"></label>
+          </div>
+
+          <div class="slider__info">
+            <h3 class="slider__title">Intro</h3>
+            <p class="slider__desc">By the same illusion which lifts the horizon.</p>
+          </div>
+        </div>
+    </section>
+  </header>
+  <main class="main">
+    <section class="whowhe">
+      <h1 class="whowhe-title">Who we are</h1>
+      <p class="whowhe-desc">
+        We embrace a strategic approach to creative ideas. We are interested in people and human relationships. This is
+        the main thing you need to know about us. We believe in the power of bold ideas that can solve business
+        challenges.
+      </p>
+    </section>
+    <section class="expertise">
+      <h1 class="expertise-title">
+        Our expertise
+      </h1>
+      <div class="expertise__content">
+        <img src="src/images/expertise/expertise-1.png" alt="imagem ilustração do branding"
+          class="expertise__content-img">
+        <h3 class="expertise__content-title">Branding</h3>
+        <p class="expertise__content-desc">We create additional value for companies, products, services as well as
+          verbal and visual ways to deliver it to the audience.</p>
+      </div>
+      <div class="expertise__content">
+        <img src="src/images/expertise/expertise-2.png" alt="imagem ilustrativa do comunication"
+          class="expertise__content-img">
+        <h3 class="expertise__content-title">Communication</h3>
+        <p class="expertise__content-desc">We strive to create communications that can increase media performance. We
+          use everything — words, meanings, stories, art, movies.</p>
+      </div>
+      <div class="expertise__content">
+        <img src="src/images/expertise/expertise-3.png" alt="imagem ilustrativa do Strategy"
+          class="expertise__content-img">
+        <h3 class="expertise__content-title">Strategy</h3>
+        <p class="expertise__content-desc">We create business growth strategies, from the moment of its birth to the
+          achievement of the necessary business indicators.</p>
+      </div>
+    </section>
+    <section class="services">
+      <h4 class="services-name">
+        Services
+      </h4>
+      <h1 class="services-title">
+        Air is a full service creative agency
+      </h1>
+      <p class="services-desc">
+        Deep analytics, strong strategy and bright creative ideas.<br>
+        <br>
+        We are sure that first-rate job is possible only if all three components are united.
+      </p>
+      <div class="services__content">
+        <a href="" class="link services__content-number">001</a>
+        <p class="services__content-desc">
+          Deep analytics, strong strategy and bright creative ideas.
+          We are sure that first-rate job is possible only if all three components are united.
+        </p>
+        <div class="services__content__learn">
+          <img src="src/images/arrow-enter.png" alt="" class="services__content__learn-img">
+          <a href="" class="link services__content__learn-link">Learn More</a>
+        </div>
+      </div>
+      <div class="services__content">
+        <a href="" class="link services__content-number">002 </a>
+        <p class="services__content-desc">
+          Сontent Production
+          Graphic Design
+          Video Production
+          Post Production
+        </p>
+        <div class="services__content__learn">
+          <img src="src/images/arrow-enter.png" alt="" class="services__content__learn-img">
+          <a href="" class="link services__content__learn-link">Learn More</a>
+        </div>
+      </div>
+      <div class="services__content">
+        <a href="" class="link services__content-number">003 </a>
+        <p class="services__content-desc">
+          Marketing Strategy
+          Email Marketing
+          Paid Advertising
+          Blog Content & SEO
+        </p>
+        <div class="services__content__learn">
+          <img src="src/images/arrow-enter.png" alt="" class="services__content__learn-img">
+          <a href="" class="link services__content__learn-link">Learn More</a>
+        </div>
+      </div>
+      <div class="services__content">
+        <a href="" class="link services__content-number">004 </a>
+        <p class="services__content-desc">
+          Digital Communications
+          Influencer Marketing
+          Product Placements
+          Strategic Partnerships
+        </p>
+        <div class="services__content__learn">
+          <img src="src/images/arrow-enter.png" alt="" class="services__content__learn-img">
+          <a href="" class="link services__content__learn-link">Learn More</a>
+        </div>
+      </div>
+    </section>
+    <section class="testimonials">
+      <h4 class="testimonials-name">Testimonials</h4>
+      <h1 class="testimonials-title">What people say</h1>
+      <div class="testimonials__content">
+        <div class="testimonials__content__ilustration">
+          <img src="src/images/testimonials/testimonial-ava-1.jpg" alt=""
+            class="testimonials__content__ilustration-img">
+        </div>
+        <div class="testimonials__content__desc">
+          <img src="src/images/logo/icon-aspas.png" alt="" class="testimonials__content__desc-img">
+          <p class="testimonials__content__desc-text">AIR’s ideas are refreshing and out of the box. Authentic team that
+            focuses on the important path of the brand.</p>
+        </div>
+        <div class="testimonials__content__info">
+          <h2 class="testimonials__content__info-name">
+            Tal Gilad
+          </h2>
+          <h3 class="testimonials__content__info-proff">Teach for America</h3>
+        </div>
+      </div>
+      <div class="testimonials__content">
+        <div class="testimonials__content__ilustration">
+          <img src="src/images/testimonials/testimonial-ava-2.jpg" alt=""
+            class="testimonials__content__ilustration-img">
+        </div>
+        <div class="testimonials__content__desc">
+          <img src="src/images/logo/icon-aspas.png" alt="" class="testimonials__content__desc-img">
+          <p class="testimonials__content__desc-text">AIR is an exceptional agency that leads with creative talent,
+            first-class account servicing.</p>
+        </div>
+        <div class="testimonials__content__info">
+          <h2 class="testimonials__content__info-name">
+            Azadeh Hawkins
+          </h2>
+          <h3 class="testimonials__content__info-proff">Hawkins Consulting</h3>
+        </div>
+      </div>
+      <div class="testimonials__content">
+        <div class="testimonials__content__ilustration">
+          <img src="src/images/testimonials/testimonial-ava-3.jpg" alt=""
+            class="testimonials__content__ilustration-img">
+        </div>
+        <div class="testimonials__content__desc">
+          <img src="src/images/logo/icon-aspas.png" alt="" class="testimonials__content__desc-img">
+          <p class="testimonials__content__desc-text">AIR raises the agency bar to stratospheric heights on both
+            creative output and client service.</p>
+        </div>
+        <div class="testimonials__content__info">
+          <h2 class="testimonials__content__info-name">
+            Michel Grover </h2>
+          <h3 class="testimonials__content__info-proff">Hulu</h3>
+        </div>
+      </div>
+    </section>
+    <section class="visions">
+      <h1 class="visions-title">Vision, Passion, Results</h1>
+      <p class="visions-desc">We are sure that first-rate job is possible only if all three components are united.</p>
+      <button class="visions-button">Apply</button>
+    </section>
+    <section class="sendus">
+      <div class="sendus__content">
+        <div class="sendus__content__msg">
+          <h1 class="sendus__content__msg-title">
+            Send us a message
+          </h1>
+          <input type="email" class="sendus__content__msg-input" placeholder="Email@example.com.br">
+          <input type="text" class="sendus__content__msg-input" placeholder="Your Name">
+          <input type="text" class="sendus__content__msg-input" placeholder="Your Message">
+          <button class="button-blue sendus__content__msg-button">Send</button>
+        </div>
+        <div class="sendus__content__contactus">
+          <h1 class="sendus__content__contactus-title">Contact us</h1>
+
+          <div class="call-us">
+            <h3 class="sendus__content__contactus-subtitle">Call us</h3>
+            <p class="sendus__content__contactus-desc">654 321 987</p>
+          </div>
+
+          <div class="info">
+            <h3 class="sendus__content__contactus-subtitle">Visit us</h3>
+            <p class="sendus__content__contactus-desc">2905 West Drive,<br> Buffalo Grove</p>
+          </div>
+
+          <div class="socials">
+            <h3 class="sendus__content__contactus-subtitle">our socials</h3>
+            <div class="sendus__content__contactus-icons">
+              <a href="#" class="icon-social sendus__content__contactus-icons-f"></a>
+              <a href="#" class="icon-social sendus__content__contactus-icons-x"></a>
+              <a href="#" class="icon-social sendus__content__contactus-icons-i"></a>
+            </div>
+          </div>
+
+        </div>
+        <section class="footer">
+          <img src="src/images/logo/air-logo.png" alt="logo do air" class="footer-logo">
+          <nav class="footer-nav">
+            <ul class="footer-nav-ul">
+              <li>
+                <a href="#" class="footer-link">About Us</a>
+              </li>
+              <li>
+                <a href="#" class="footer-link">Home</a>
+              </li>
+              <li>
+                <a href="#" class="footer-link">Work</a>
+              </li>
+              <li>
+                <a href="#" class="footer-link">Services</a>
+              </li>
+              <li>
+                <a href="#" class="footer-link">Contact Us</a>
+              </li>
+            </ul>
+          </nav>
+        </section>
+      </div>
+    </section>
+
+  </main>
+</body>
+
 </html>
