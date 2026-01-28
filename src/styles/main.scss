@@ -12,9 +12,8 @@
 @import 'blocks/services';
 
 * {
-  box-sizing: border-box;
   scroll-behavior: smooth;
-
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -58,8 +57,9 @@
 
 .link-branco {
   @include link-white;
-  transition: transform 0.3s ease;
+
   cursor: pointer;
+  transition: transform 0.3s ease;
 
   &:hover {
     transform: scale(1.1);
@@ -77,8 +77,8 @@ ul {
 }
 
 .hoversize {
-  transition: transform 0.3s ease;
   cursor: pointer;
+  transition: transform 0.3s ease;
 
   &:hover {
     transform: scale(1.1);
