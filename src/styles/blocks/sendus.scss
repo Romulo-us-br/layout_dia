@@ -113,6 +113,7 @@ input:-webkit-autofill:active {
 
       gap: 40px;
 
+     
       &-icons {
         display: flex;
         flex-direction: row;
@@ -153,7 +154,7 @@ input:-webkit-autofill:active {
         margin-top: 8px;
         font-size: 24px;
         line-height: 150%;
-        color: gray;
+        color: #fff;
 
         @include open-600;
       }
