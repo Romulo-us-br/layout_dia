@@ -13,8 +13,9 @@
 
 * {
   box-sizing: border-box;
-  margin: 0;
   scroll-behavior: smooth;
+
+  margin: 0;
   padding: 0;
 }
 
@@ -57,6 +58,12 @@
 
 .link-branco {
   @include link-white;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 }
 
 ul {
@@ -67,4 +74,17 @@ ul {
   display: inline-block;
   width: 32px;
   height: 32px;
+}
+
+.hoversize {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.a1{
+  display: inline-block;
 }
